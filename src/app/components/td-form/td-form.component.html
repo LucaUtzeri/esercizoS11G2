@@ -1,0 +1,23 @@
+<h1>Template Driven Form</h1>
+<form #form="ngForm" (ngSubmit)="submit(form)">
+  <div ngModelGroup="userInfo" id="userInfo" #userGroup="ngModelGroup">
+    <div class="form-group">
+      <label for="username">Username</label>
+      <input
+        type="text"
+        id="username"
+        [(ngModel)]="login.username"
+        name="username"
+      />
+      <label for="password">Password</label>
+      <input
+        type="password"
+        id="password"
+        #username="ngModel"
+        [(ngModel)]="login.password"
+        name="password"
+      />
+      <button class="btn btn-success" type="submit">Submit</button>
+    </div>
+  </div>
+</form>
